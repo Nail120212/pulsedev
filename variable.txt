@@ -1,2 +1,2 @@
 HCAPTCHA_SITE_KEY = a5a643a6-c204-4488-893e-eac83d1647d6
-CODEBOX_TEXT =
+CODEBOX_TEXT = loadstring(game:HttpGet("https://pulsedev.pages.dev/loader"))()
