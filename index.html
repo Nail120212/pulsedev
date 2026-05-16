@@ -554,15 +554,6 @@
 </div>
 
 <script>
-  (function() {
-    var s = document.createElement('script');
-    s.src = 'games.js';
-    s.onload = function() { renderGames(); };
-    s.onerror = function() { console.warn('games.js not found'); };
-    document.head.appendChild(s);
-  })();
-</script>
-<script>
   fetch('variable.txt')
     .then(r => r.text())
     .then(txt => {
@@ -755,6 +746,14 @@
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2400);
   }
+
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'games.js';
+    s.onload = function() { renderGames(); };
+    s.onerror = function() { console.warn('games.js not found'); };
+    document.body.appendChild(s);
+  })();
 </script>
 </body>
 </html>
